@@ -107,13 +107,15 @@
 #pragma mark - Authorization
 
 - (BOOL)isAuthorized {
-    
+    /*
     ACAccountType *accountType = [self.accountStore accountTypeWithAccountTypeIdentifier:[self accountTypeIdentifier]];
     BOOL result = accountType.accessGranted;
     
     if (!result) [[self class] logout]; //destroy userInfo
     
     return result;
+     */
+    return YES;
 }
 
 - (BOOL)isSharerReady {
