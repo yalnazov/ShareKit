@@ -80,7 +80,7 @@
                                            options:readPermissions
                                         completion:^(BOOL readGranted, NSError *error) {
                                             
-                                                if (readGranted) {
+                                                //if (readGranted) {
                                                     
                                                     [store requestAccessToAccountsWithType:sharerAccountType
                                                                                    options:writePermissions
@@ -97,12 +97,13 @@
                                                                                         }
                                                                                     }];
                                                                                 }];
+                                                    /*
                                                 } else {
                                                     
                                                     [[NSOperationQueue mainQueue] addOperationWithBlock:^ {
                                                         [self iOSAuthorizationFailedWithError:error];
                                                     }];
-                                                }
+                                                }*/
                                         }];
             break;
         }
