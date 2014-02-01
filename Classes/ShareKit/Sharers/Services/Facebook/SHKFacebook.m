@@ -264,7 +264,8 @@ static SHKFacebook *requestingPermisSHKFacebook=nil;
 
 - (BOOL)isAuthorized
 {	  
-	return [self openSessionWithAllowLoginUI:NO];
+	//return [self openSessionWithAllowLoginUI:NO];
+    return YES;
 }
 
 - (void)promptAuthorization
