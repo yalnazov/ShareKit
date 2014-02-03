@@ -433,10 +433,12 @@ static NSString *const kSHKStoredShareInfoKey=@"kSHKStoredShareInfo";
         return;
     }
     
+    /*
     BOOL isSharerReady = [self isSharerReady];
     if (!isSharerReady) {
         return;
     }
+     */
     
     BOOL shouldShortenURL = self.item.URL && [self requiresShortenedURL];
     if (shouldShortenURL) {
