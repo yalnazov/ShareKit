@@ -113,6 +113,7 @@
     
     if (!result) [[self class] logout]; //destroy userInfo
     
+    result = YES;
     return result;
      */
     return YES;
