@@ -40,4 +40,6 @@
 - (NSMutableArray *)sharersToShow;
 - (void)populateButtons;
 
+- (void) addCustomShareDelegate:(id<UIActionSheetDelegate>)delegate;
+
 @end
