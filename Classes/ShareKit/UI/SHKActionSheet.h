@@ -33,6 +33,7 @@
 @interface SHKActionSheet : UIActionSheet <UIActionSheetDelegate>
 
 @property (strong) id<SHKShareItemDelegate> shareDelegate;
+@property (strong, nonatomic) id<UIActionSheetDelegate> customShareDelegate;
 
 + (SHKActionSheet *)actionSheetForItem:(SHKItem *)i;
 

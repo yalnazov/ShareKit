@@ -128,8 +128,20 @@
 		shareMenu.item = self.item;
 		[[SHK currentHelper] showViewController:shareMenu];
 	}
+    
+    else if(self.customShareDelegate != nil){
+        
+        [self.customShareDelegate actionSheet:self didDismissWithButtonIndex:buttonIndex];
+        
+    }
 	
 	[super dismissWithClickedButtonIndex:buttonIndex animated:animated];
+}
+
+- (void) addCustomShareDelegate:(id<UIActionSheetDelegate>)delegate{
+    
+    self.customShareDelegate = delegate;
+    
 }
 
 @end
