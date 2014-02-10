@@ -1,4 +1,4 @@
-Pod::Spec.new do |s|
+﻿Pod::Spec.new do |s|
   s.name          = 'ShareKit'
   s.version       = '2.5.3'
   s.platform      = :ios, '5.1.1'
@@ -35,93 +35,15 @@ Pod::Spec.new do |s|
     reachability.requires_arc = false
   end
 
-  s.subspec 'Evernote' do |evernote|
-    evernote.source_files = 'Classes/ShareKit/Sharers/Services/Evernote/**/*.{h,m}'
-    evernote.dependency 'Evernote-SDK-iOS', '~> 1.3.0'
-    evernote.dependency 'ShareKit/Core'
-    evernote.libraries = 'xml2'
-    evernote.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
-  end
-
   s.subspec 'Facebook' do |facebook|
     facebook.source_files   = 'Classes/ShareKit/Sharers/Services/Facebook/**/*.{h,m}'
     facebook.dependency 'Facebook-iOS-SDK'
     facebook.dependency 'ShareKit/Core'
   end
 
-  s.subspec 'Flickr' do |flickr|
-    flickr.source_files = 'Classes/ShareKit/Sharers/Services/Flickr/SHK*.{h,m}'
-    flickr.framework = 'SystemConfiguration', 'CFNetwork'
-    flickr.dependency 'objectiveflickr', "~> 2.0"
-    flickr.dependency 'ShareKit/Core'
-  end
-
-  s.subspec 'Foursquare' do |foursquare|
-    foursquare.source_files = 'Classes/ShareKit/Sharers/Services/FoursquareV2/**/*.{h,m}'
-    foursquare.framework = 'CoreLocation'
-    foursquare.dependency 'ShareKit/Core'
-  end
-
-  s.subspec 'Delicious' do |delicious|
-    delicious.source_files = 'Classes/ShareKit/Sharers/Services/Delicious/**/*.{h,m}'
-    delicious.dependency 'ShareKit/Core'
-  end
-
-  s.subspec 'Hatena' do |hatena|
-    hatena.source_files = 'Classes/ShareKit/Sharers/Services/Hatena/**/*.{h,m}'
-    hatena.dependency 'ShareKit/Core'
-  end
-
-  s.subspec 'Kippt' do |kippt|
-    kippt.source_files = 'Classes/ShareKit/Sharers/Services/Kippt/**/*.{h,m}'
-    kippt.dependency 'ShareKit/Core'
-  end
-
-   s.subspec 'Plurk' do |plurk|
-    plurk.source_files = 'Classes/ShareKit/Sharers/Services/Plurk/**/*.{h,m}'
-    plurk.dependency 'ShareKit/Core'
-  end
-
-   s.subspec 'Pocket' do |pocket|
-    pocket.source_files = 'Classes/ShareKit/Sharers/Services/Pocket/**/*.{h,m}'
-    pocket.dependency 'ShareKit/Core'
-    pocket.dependency 'PocketAPI', '~> 1.0'
-  end
-
-  s.subspec 'Diigo' do |diigo|
-    diigo.source_files = 'Classes/ShareKit/Sharers/Services/Diigo/**/*.{h,m}'
-    diigo.dependency 'ShareKit/Core'
-  end
-
-  s.subspec 'Dropbox' do |dropbox|
-    dropbox.source_files = 'Classes/ShareKit/Sharers/Services/Dropbox/**/*.{h,m}'
-    dropbox.dependency 'ShareKit/Core'
-    dropbox.dependency 'Dropbox-iOS-SDK', '~> 1.3'
-  end
-
-  s.subspec 'Instapaper' do |instapaper|
-    instapaper.source_files = 'Classes/ShareKit/Sharers/Services/Instapaper/**/*.{h,m}'
-    instapaper.dependency 'ShareKit/Core'
-  end
-
   s.subspec 'LinkedIn' do |linkedin|
     linkedin.source_files = 'Classes/ShareKit/Sharers/Services/LinkedIn/**/*.{h,m}'
     linkedin.dependency 'ShareKit/Core'
-  end
-
-  s.subspec 'Pinboard' do |pinboard|
-    pinboard.source_files = 'Classes/ShareKit/Sharers/Services/Pinboard/**/*.{h,m}'
-    pinboard.dependency 'ShareKit/Core'
-  end
-
-  s.subspec 'Readability' do |readability|
-    readability.source_files = 'Classes/ShareKit/Sharers/Services/Readability/**/*.{h,m}'
-    readability.dependency 'ShareKit/Core'
-  end
-
-  s.subspec 'ReadItLater' do |readitlater|
-    readitlater.source_files = 'Classes/ShareKit/Sharers/Services/Read It Later/**/*.{h,m}'
-    readitlater.dependency 'ShareKit/Core'
   end
 
   s.subspec 'Tumblr' do |tumblr|
@@ -133,22 +55,6 @@ Pod::Spec.new do |s|
     twitter.source_files = 'Classes/ShareKit/Sharers/Services/Twitter/**/*.{h,m}'
     twitter.framework = 'Twitter','Social'
     twitter.dependency 'ShareKit/Core'
-  end
-
- s.subspec 'SinaWeibo' do |sinaweibo|
-    sinaweibo.source_files = 'Classes/ShareKit/Sharers/Services/Sina Weibo/**/*.{h,m}'
-    sinaweibo.dependency 'ShareKit/Core'
-    sinaweibo.framework = 'Social'
-  end
-
-  s.subspec 'Vkontakte' do |vkontakte|
-    vkontakte.source_files = 'Classes/ShareKit/Sharers/Services/Vkontakte/**/*.{h,m}'
-    vkontakte.dependency 'ShareKit/Core'
-  end
-
-  s.subspec 'Instagram' do |instagram|
-    instagram.source_files = 'Classes/ShareKit/Sharers/Services/Instagram/**/*.{h,m}'
-    instagram.dependency 'ShareKit/Core'
   end
 
   s.subspec 'GooglePlus' do |googleplus|
