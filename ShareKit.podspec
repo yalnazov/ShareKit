@@ -1,4 +1,4 @@
-﻿Pod::Spec.new do |s|
+Pod::Spec.new do |s|
   s.name          = 'ShareKit'
   s.version       = '2.5.3'
   s.platform      = :ios, '5.1.1'
@@ -14,17 +14,15 @@
   
   non_arc_files = 'Classes/ShareKit/Core/Helpers/OAuth/**/*.{h,m}', 'Classes/ShareKit/Core/Categories/GTMNSString+HTML.m'
 
- s.subspec 'Core' do |core|
+s.subspec 'Core' do |core|
     core.resource_bundle = {'ShareKit' => ['Classes/ShareKit/Core/SHKSharers.plist', 'Classes/ShareKit/Localization/*.lproj', 'Classes/ShareKit/*.png']}
     core.source_files  = 'Classes/ShareKit/{Configuration,Core,UI}/**/*.{h,m,c}', 'Classes/ShareKit/Sharers/Actions/**/*.{h,m,c}'
     core.exclude_files = non_arc_files
     core.frameworks    = 'SystemConfiguration', 'Security', 'MessageUI', "AVFoundation", "MobileCoreServices", "CoreMedia", "Social"
-    core.dependency 'SSKeychain', '~> 1.2.2'
-    core.dependency 'SAMTextView', '~> 0.2.1'
+    core.dependency 'SSKeychain', '~> 0.2.1'
+    core.dependency 'SSToolkit', '~> 2.0.0'
     core.dependency 'ShareKit/Reachability'
     core.dependency 'ShareKit/NoARC'
-    core.dependency 'SDWebImage'
-    core.dependency 'UIActivityIndicator-for-SDWebImage'
   end
 
   s.subspec 'NoARC' do |noarc|
